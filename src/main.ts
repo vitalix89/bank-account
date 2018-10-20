@@ -10,7 +10,7 @@ export class BankAccount {
   }
 
   public addToAccount(amount: number, callback?: (newBalance: number) => any) {
-    this._balance += amount;
+    this._balance -= amount;
     if (callback) {
       callback(this._balance);
     }
